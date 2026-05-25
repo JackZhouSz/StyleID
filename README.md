@@ -22,7 +22,7 @@ It can be used for **identity similarity measurement, retrieval, evaluation, and
 - [x] ArXiv released
 - [x] Recognition model release 
 - [x] Dataset release
-- [ ] Data generation code release
+- [x] Data generation code release
 - [ ] Train code release
 ---
 
