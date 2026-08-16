@@ -15,16 +15,6 @@ It can be used for **identity similarity measurement, retrieval, evaluation, and
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/639d445524af4747d8d2af52/1pTEZ88YvwnbDPlV_UqpM.jpeg" width="800">
 
----
-
-## Project Status
-
-- [x] ArXiv released
-- [x] Recognition model release 
-- [x] Dataset release
-- [x] Data generation code release
-- [ ] Train code release
----
 
 ## Quick Start
 ```python
