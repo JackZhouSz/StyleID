@@ -17,8 +17,12 @@ It can be used for **identity similarity measurement, retrieval, evaluation, and
 
 
 ## Quick Start
+
+```bash
+pip install torch transformers==4.52.0 pillow
+```
+
 ```python
-!pip install transformers==4.52.0
 import torch
 from transformers import CLIPModel, CLIPProcessor
 from PIL import Image
@@ -28,7 +32,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model = CLIPModel.from_pretrained("kwanY/styleid").to(device)
 processor = CLIPProcessor.from_pretrained("kwanY/styleid")
 
-img_path = "example.jpg"
+img_path = "data/ex.png"
 img = Image.open(img_path).convert("RGB")
 
 inputs = processor(images=img, return_tensors="pt").to(device)
@@ -39,10 +43,40 @@ with torch.no_grad():
 ```
 
 #### Notes
+
 - Not suitable for images with **multiple faces**
 - Rough center crop near the face is recommended for better performance
 
---- 
+---
+
+## Training
+
+Install the additional dependencies:
+
+```bash
+pip install wandb tqdm
+```
+
+Prepare StyleID-S with the following structure:
+
+```text
+styleid-s/
+├── p3/
+│   └── {identity}.png
+└── {method}/
+    └── {style}/
+        └── {identity}_{index}.png
+```
+
+Then create the checkpoint directory and run the training script. The dataset path and training hyperparameters can be changed in the final line of the script.
+
+```bash
+mkdir -p ckpt
+python full_train_clip-checkpoint.py
+```
+
+---
+
 ## Intended Uses
 
 StyleID embeddings can be used for:
