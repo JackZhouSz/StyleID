@@ -6,7 +6,6 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2604.21689-b31b1b.svg)](https://arxiv.org/abs/2604.21689)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://kwanyun.github.io/StyleID_page/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-yellow)](https://huggingface.co/kwanY/styleid)
-[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/kwanY/stylebench-s)
 
 
 StyleID is a CLIP-based image encoder designed to produce **identity embeddings that remain robust under stylization**.  
@@ -57,7 +56,9 @@ Install the additional dependencies:
 pip install wandb tqdm
 ```
 
-Prepare StyleID-S with the following structure:
+
+Prepare [StyleID-S](https://huggingface.co/datasets/kwanY/stylebench-s)
+ with the following structure:
 
 ```text
 styleid-s/
